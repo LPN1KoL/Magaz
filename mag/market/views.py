@@ -4,6 +4,6 @@ from django.shortcuts import render
 
 def welcome(request):
     if request.user.is_anonymous:
-        HttpResponseRedirect('/login')
+        return HttpResponseRedirect('/login')
     else:
-        HttpResponseRedirect('/home')
+        return HttpResponseRedirect('/home')
