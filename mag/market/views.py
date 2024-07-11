@@ -87,6 +87,7 @@ def myadmin_orders(request):
 		return HttpResponseRedirect('/home')
 
 def admin_add_product(request):
+	form = ProductForm
 	if request.user.role.admin_access:
 		if request.method == 'GET':
 			tags = Tag.objects.all()
@@ -95,5 +96,7 @@ def admin_add_product(request):
 		else:
 			name = request.POST["name"]
 			price = request.POST["price"]
+			image = request.POST["image"]
+			form.save()
 	else:
 		return HttpResponseRedirect('/home')
