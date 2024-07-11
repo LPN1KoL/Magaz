@@ -46,8 +46,6 @@ class Basket(models.Model):
     products = models.ManyToManyField(Product)
     price = models.PositiveIntegerField
 
-    def __str__(self):
-        return self.id
 
     class Meta:
         verbose_name = 'Корзина'
@@ -56,6 +54,7 @@ class Basket(models.Model):
 
 class Role(models.Model):
     name = models.CharField(max_length=300)
+    admin_access = models.BooleanField(null=True)
 
     def __str__(self):
         return self.name
@@ -83,8 +82,6 @@ class Order(models.Model):
     products = models.ManyToManyField(Product)
     user = models.OneToOneField(User, on_delete=models.SET_NULL, null=True)
 
-    def __str__(self):
-        return self.id
 
     class Meta:
         verbose_name = 'Заказ'

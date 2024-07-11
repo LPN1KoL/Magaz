@@ -1,0 +1,11 @@
+.content{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+
+.wer{
+    font-size: 30px;
+    text-decoration: none;
+    color: blue;
+    margin: 30px;
+}

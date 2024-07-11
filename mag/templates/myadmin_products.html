@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/admin.css' %}">
+
+<div class="content">
+    <div class="filler"></div>
+    <div class="products">
+        {% for product in products %}
+            <a class="prod" href="/product/{{product.id}}">
+                <div class="product">
+                    <img class="product_image" src={{product.image.url}} alt="">
+                    <span class="name">{{product.name}}</span>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+    <div class="filler">
+        <a class="add-but" href="/myadmin/add_product">
+            <div class="add">
+                <span class="add_sp">Добавить товар</span>
+            </div>
+        </a>
+    </div>
+</div>
+
+{% endblock %}

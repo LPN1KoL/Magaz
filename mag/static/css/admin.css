@@ -1,0 +1,51 @@
+.products{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+
+.product{
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 15vh;
+    width: 15vw;
+}
+
+.product_image{
+    height: 15vh;
+    width: 15vh;
+}
+
+.name{
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+    margin: auto 20px;
+}
+
+.prod{
+    margin: 30px;
+}
+
+.add-but{
+    margin: 50px;
+}
+
+.add{
+    border-radius: 10px;
+    background-color: #5CACD3;
+    height: 10vh;
+    width: 15vw;
+}
+
+.add_sp{
+    color: white;
+    text-decoration: none;
+    font-size: 4vh;
+    margin-top: 2vh;
+}

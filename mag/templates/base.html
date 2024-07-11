@@ -22,7 +22,7 @@
         {% if request.user.is_authenticated %}
         <div class="prof">
             <a id="usrname" href="/profile/{{request.user.id}}">{{ request.user.username }}</a>
-            <img id="usricon" src="{% static 'staticphoto/us_icon.png' %}">
+            <img id="usricon" src="{% static 'images/user_icon.png' %}">
         </div>
         {% else %}
             <a id="log" href="/login">Войти</a>
