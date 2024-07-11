@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="static/css/register.css">
+
+<div class="content">
+    <div class="filler"></div>
+    <form method="POST" id="fomr">
+        {% csrf_token %}
+        {% for f in form %}
+                <div class="form-element">
+                    {{f}}
+                </div>
+            {% endfor %}
+        <button id="form-btn" type="submit">Save</button>
+    </form>
+
+    <div class="filler"></div>
+</div>
+
+{% endblock %}

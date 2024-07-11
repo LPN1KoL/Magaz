@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="static/css/login.css">
+
+<div class="content">
+    <div class="filler"></div>
+    <form method="POST" id="fomr">
+        {% csrf_token %}
+        <div class="username">
+            <input type="text" name="username" id="usrnme" placeholder="Имя пользователя">
+        </div>
+        <div class="password">
+            <input type="password" name="password" id="pswrd" placeholder="Пароль">
+        </div>
+
+        <button id="form-btn" type="submit">Save</button>
+        <div class="toy">
+            <span>Нет аккаунта?</span>
+            <a id="reg" href="/register">Регистрация</a>
+        </div>
+    </form>
+
+    <div class="filler"></div>
+</div>
+
+{% endblock %}

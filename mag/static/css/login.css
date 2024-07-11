@@ -1,0 +1,60 @@
+.content{
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+}
+
+#fomr{
+    text-align: center;
+}
+
+#usrnme{
+    margin-top: 20px;
+    height: 1.5rem;
+    width: 250px;
+}
+
+#pswrd{
+    margin-top: 20px;
+    height: 1.5rem;
+    width: 250px;
+}
+
+.password{
+    text-align: center;
+}
+
+.username{
+    text-align: center;
+}
+
+#form-btn{
+    margin: 40px;
+    font-size: 20px;
+    padding: 3px 50px;
+    background-color: #87c944;
+    border-radius: 10px;
+}
+
+#form-btn:hover{
+    background-color: #608f32;
+}
+
+#reg{
+    text-decoration: none;
+    font-size: 18px;
+    padding: 2px 10px;
+    padding-bottom: 0px;
+    border-radius: 5px;
+    background-color: #2477d6;
+    color: white;
+    margin-left: 10px;
+}
+
+.toy{
+    padding-top: 50px;
+    display: flex;
+}
+
+span{
+    font-size: 24px;
+}

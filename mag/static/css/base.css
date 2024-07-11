@@ -1,0 +1,282 @@
+.navbar{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    background-color: #5CACD3;
+    height: 50px;
+}
+
+head, body{
+    padding: 0px;
+    margin: 0px;
+}
+
+#hom {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    margin: auto 25px;
+    font-family: "Knewave", system-ui;
+}
+
+
+#log{
+    text-decoration: none;
+    color: white;
+    margin: auto auto;
+    background-color: red;
+    font-size: 20px;
+    padding: 7px;
+    border-radius: 7px;
+}
+
+#log:hover{
+    background-color: #c72020;
+}
+
+#logout{
+    text-decoration: none;
+    color: white;
+    margin: auto auto;
+    background-color: red;
+    font-size: 20px;
+    padding: 7px;
+    border-radius: 7px;
+}
+
+#logout:hover{
+    background-color: #c72020;
+}
+
+.prof{
+    text-align: center;
+    display: flex;
+    margin-left: 200px;
+}
+
+#usrname{
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    margin: auto 10px;
+}
+
+#usricon{
+    width: 40px;
+    height: 40px;
+    text-align: end;
+    margin-top: 4px;
+}
+
+
+#yes{
+    text-decoration: none;
+    padding: 2px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    outline: 2px solid red;
+    margin-right: 50px;
+}
+
+#yes:hover{
+    color: white;
+    background-color: red;
+}
+
+#modal{
+    display: none;
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    box-shadow: 0px 0px 100px 1000px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding-top: 15px;
+    margin-top: calc(50vh - 70px - 75px);
+    margin-left: calc(50vw - 150px);
+}
+
+#nadpis{
+    font-size: 36px;
+}
+
+.btns{
+    margin-top: 50px;
+}
+
+#no{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 2px 10px;
+    border-radius: 5px;
+    background-color: #2477d6;
+    color: white;
+    margin-left: 10px;
+    border: none;
+}
+
+#no:hover{
+    cursor: pointer;
+}
+
+#search{
+    width: 20vw;
+    margin-top: 10px;
+    height: 1.5rem;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+
+#search:focus{
+    box-shadow: 0px 0px 10000px 10000px rgba(0, 0, 0, 0.6);
+    outline: none;
+}
+
+.filler{
+    text-align: center;
+}
+
+::-webkit-input-placeholder {
+    text-align:center;
+}
+
+#mod{
+    width: 50vw;
+    background-color: white;
+    display: none;
+    z-index: 1010;
+    position: fixed;
+    border-radius: 12px;
+    margin-left: 25vw;
+    margin-top: 30px;
+    min-height: 24px;
+    padding: 20px;
+    max-height: 80vh;
+    overflow-y: scroll;
+}
+
+
+
+#res{
+    font-size: 24px;
+}
+
+#poster{
+    height: 224px;
+    width: 160px;
+}
+
+.anime{
+    width: 160px;
+    height: 270px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#aniname{
+    text-decoration: none;
+    color: black;
+    font-size: 26px;
+    underline: none;
+}
+
+#ssilka{
+    height: 270px;
+    width: 160px;
+}
+
+#products{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+
+}
+
+#mod::-webkit-scrollbar{
+    display: none;
+}
+
+.ljhs{
+    height: 50px;
+    display: grid;
+    grid-template-columns: 40%  60%;
+}
+
+
+#random {
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+    margin: auto 15px;
+}
+
+
+@media (1388px < width <= 1600px){
+    #products {
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+}
+
+@media (width >= 1900px){
+    #products {
+        grid-template-columns: 16% 17% 16% 16% 16% 16%;
+    }
+}
+
+@media (1030px < width <= 1388px){
+    #products {
+        grid-template-columns: 33% 34% 33%;
+    }
+}
+
+@media (700px < width <= 1030px){
+    #products {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media (width <= 700px){
+    #products {
+        grid-template-columns: 100%;
+    }
+}
+
+.footer{
+    width: 100vw;
+    height: 40vh;
+    background-color: #786865;
+}
+
+ .footer-link{
+    color: white;
+    font-size: 24px;
+    transition: 0.3s;
+ }
+
+.footer-link:hover{
+    font-size: 30px;
+ }
+
+.links{
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+}
+
+@media (width){
+    .links{
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media (width){
+    .links{
+        grid-template-columns: 100%;
+    }
+}
+
+.row{
+    display: grid;
+    grid-template-columns: 100%;
+    text-align: center;
+}

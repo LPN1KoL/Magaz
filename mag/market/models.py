@@ -27,7 +27,7 @@ class Category(models.Model):
 
 class Product(models.Model):
     name = models.CharField(max_length=300)
-    prise = models.PositiveIntegerField
+    price = models.PositiveIntegerField
     tags = models.ManyToManyField(Tag)
     image = models.ImageField(upload_to='media/products_images')
     categories = models.ManyToManyField(Category)
@@ -39,9 +39,15 @@ class Product(models.Model):
         verbose_name = 'Продукт'
         verbose_name_plural = 'Продукты'
 
+    def to_json(self):
+        return {'name': self.name, 'price': self.price, 'id': self.id, 'tags': self.tags, 'image': self.image.url, 'categories': self.categories}
+
 class Basket(models.Model):
     products = models.ManyToManyField(Product)
     price = models.PositiveIntegerField
+
+    def __str__(self):
+        return self.id
 
     class Meta:
         verbose_name = 'Корзина'
@@ -64,8 +70,7 @@ class User(AbstractUser):
     role = models.ForeignKey(Role, on_delete=models.SET_NULL, verbose_name='Роль', null=True)
     basket = models.OneToOneField(to=Basket, on_delete=models.SET_NULL, null=True)
 
-    def __str__(self):
-        return self.name
+
 
     class Meta:
         verbose_name = 'Пользователь'
@@ -79,7 +84,7 @@ class Order(models.Model):
     user = models.OneToOneField(User, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
-        return self.name
+        return self.id
 
     class Meta:
         verbose_name = 'Заказ'
